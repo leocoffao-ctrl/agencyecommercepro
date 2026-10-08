@@ -1,0 +1,98 @@
+{
+  "brand": {
+    "name": "Studio Paliss",
+    "legal_name": "",
+    "domain": "https://www.example.org",
+    "locale": "fr-FR",
+    "language": "fr",
+    "country": "France",
+    "currency": "EUR",
+    "register": "vous"
+  },
+  "site": {
+    "type": "vitrine",
+    "platform": "wordpress"
+  },
+  "seo": {
+    "location_name": "France",
+    "language_code": "fr",
+    "ask_above_usd": 0.1,
+    "run_budget_usd": 0,
+    "protected_pages": [
+      {
+        "url": "/bibliotheque-sur-mesure",
+        "queries": [
+          "bibliothèque sur mesure lyon"
+        ]
+      },
+      {
+        "url": "/dressing-sur-mesure",
+        "queries": [
+          "dressing sur mesure lyon"
+        ]
+      },
+      {
+        "url": "/cuisine-sur-mesure",
+        "queries": [
+          "cuisine sur mesure lyon"
+        ]
+      }
+    ]
+  },
+  "voice": {
+    "banned_words": [
+      "sublimer",
+      "cocon",
+      "haut de gamme",
+      "d'exception",
+      "passionné"
+    ],
+    "no_em_dash": true,
+    "max_emojis": 0
+  },
+  "blog": {
+    "handle": "guides",
+    "path_prefix": "/guides/",
+    "author": "Studio Paliss",
+    "template_suffix": "",
+    "theme_renders_h1": true,
+    "theme_emits_jsonld": [
+      "BreadcrumbList"
+    ],
+    "forbid_hardcoded_prices": false,
+    "faq_range": [
+      4,
+      8
+    ],
+    "min_internal_destinations": 3,
+    "articles_per_run": 1,
+    "cadence_days": 14,
+    "publish_time": "09:00",
+    "timezone": "Europe/Paris",
+    "required_ids": [
+      "reponse-rapide"
+    ],
+    "delivery_folder": "",
+    "backlog": "",
+    "platform_blog_id": ""
+  },
+  "social": {
+    "platforms": [
+      "instagram"
+    ],
+    "hashtags_max": {
+      "instagram": 5
+    },
+    "brand_hashtags": [
+      "#studiopaliss"
+    ],
+    "cadence_days": 7,
+    "default_time": "18:30",
+    "timezone": "Europe/Paris",
+    "pillars": [
+      "Chantier",
+      "Atelier",
+      "Essences"
+    ]
+  }
+}

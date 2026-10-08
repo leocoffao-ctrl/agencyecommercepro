@@ -1,0 +1,25 @@
+social-publish (vitrine-kit)
+
+Workflow de publication et fichiers de reference/zernio/ repris de zernio-library-skills
+(https://github.com/Enriquemarq1/zernio-library-skills), MIT License,
+Copyright (c) 2026 Enrique Marquez. Voir LICENSE-zernio-library-skills.
+Repris : skills zernio-publish (workflow + reference/) et zernio-comment-to-dm
+(recette + reference/zernio-automations-api.md + modèle). Les fichiers de
+reference/zernio/ sont inchangés (ils mentionnent encore « zernio-publish » : lire « ce skill »).
+Non repris : la spécification OpenAPI, clip-machine, meta-ads-launch,
+white-label-blueprint, zernio-workflow-creator, zernio-voice-agent, skill-creator.
+
+reference/anti-ia.md et scripts/check_anti_ia.py : adaptation française du skill humanizer
+(https://github.com/blader/humanizer, v3.0.0), MIT License, Copyright (c) 2025 Siqi Chen.
+Original et licence dans reference/humanizer/.
+
+reference/accroches.md, scripts/check_legende.py et scripts/score_accroche.py :
+adaptation française de ig-reel (hooks.json, hookscore.py), ig-caption (caption.py),
+ig-carousel et ig-human (humanize.py, caractères invisibles) du dépôt instagram-agent-skill
+(https://github.com/Jakeschincariol/instagram-agent-skill), MIT License,
+Copyright (c) 2026 Jake Schincariol. Licence : reference/LICENSE-instagram-agent-skill.
+Non repris tels quels : humanize.py et detect.py (lexique anglais, et suppression des espaces
+insécables qui casse la typographie française), ig-plan, ig-story, ig-dm, ig-comment,
+ig-reply, ig-viral, ig-profile, ig-audit, ig-repurpose.
+
+SKILL.md et reference/voix-reseaux.md : écrits pour ce kit, MIT (voir LICENSE à la racine du dépôt).

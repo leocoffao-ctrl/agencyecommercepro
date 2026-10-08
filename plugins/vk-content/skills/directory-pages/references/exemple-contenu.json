@@ -1,0 +1,103 @@
+{
+  "_note": "Exemple entièrement fictif (marque Atelier Verveine, producteur Ferme des Courtils). Textes volontairement courts : une vraie fiche vise la volumétrie du prompt master. Les identifiants de lieu et les URL sont des valeurs de démonstration.",
+  "type": "producteur",
+  "slug": "ferme-des-courtils",
+  "nom": "Ferme des Courtils",
+  "date_releve": "01/10/2026",
+  "meta_title": "Ferme des Courtils : avis et prix | Atelier Verveine",
+  "meta_description": "Ferme des Courtils, productrice de plantes à infusion en Anjou : gamme, prix aux 100 g, points de vente et comparatif. Relevé du 01/10/2026.",
+  "schema_headline": "Ferme des Courtils : productrice de plantes à infusion en Anjou",
+  "alt_hero": "Rangs de verveine citronnée à la Ferme des Courtils",
+  "sous_titre": "La Ferme des Courtils cultive et sèche une douzaine de plantes à infusion sur deux hectares près d'Angers, vendues en vrac depuis 2019.",
+  "ligne_donnees": ["📍 Maine-et-Loire", "🌿 Séchage à basse température", "📅 Depuis 2019", "🧺 12 plantes au catalogue"],
+  "badges": [["Partenaire Atelier Verveine", "vk-badge--partenaire"], ["Fiche vérifiée le 01/10/2026", "vk-badge--verif"]],
+  "reponse_rapide": [
+    "La Ferme des Courtils est une exploitation de plantes à infusion installée près d'Angers, qui vend sa récolte en vrac depuis 2019.",
+    "La Ferme des Courtils sèche ses plantes à basse température, ce qui garde des feuilles entières et une couleur franche.",
+    "Les plantes de la Ferme des Courtils coûtent de 9 à 14 € les 100 g, selon le relevé du 01/10/2026 sur son site.",
+    "La Ferme des Courtils convient à qui cherche des plantes entières, traçables, à infuser en vrac.",
+    "La Ferme des Courtils convient mal à qui veut des infusettes : la ferme n'en produit pas.",
+    "Les plantes de la Ferme des Courtils s'achètent sur son site, sur deux marchés d'Angers et dans les coffrets Atelier Verveine."
+  ],
+  "infos": [
+    {"titre": "La ferme", "lignes": ["Lieu-dit Les Courtils, 49000 (adresse de démonstration)", "Vente à la ferme le samedi matin (site officiel)"], "place_id": "PLACE_ID_DE_DEMONSTRATION", "maps_label": "Voir la Ferme des Courtils sur Google Maps"},
+    {"titre": "En ligne", "lignes": ["Site : <a href=\"https://ferme-des-courtils.example/?utm_source=atelierverveine&amp;utm_medium=referral&amp;utm_campaign=fiche-producteur\" rel=\"nofollow noopener\" target=\"_blank\">ferme-des-courtils.example</a>", "Note en ligne : non relevée, la ferme n'a pas de fiche d'établissement publique"]},
+    {"titre": "En bref", "lignes": ["Deux hectares, récolte à la main", "Certification : non communiquée"]}
+  ],
+  "sections": {
+    "identite": {"h2": "Qui est la Ferme des Courtils ?", "p": [
+      "La Ferme des Courtils est une exploitation de deux hectares située au sud d'Angers, qui cultive, récolte et sèche elle-même ses plantes à infusion. La ferme vend en vrac depuis 2019, d'après sa page de présentation.",
+      "La Ferme des Courtils fait partie des producteurs présentés dans <a href=\"/pages/nos-producteurs\">notre annuaire des producteurs de plantes à infusion</a>."
+    ]},
+    "specialite": {"h2": "Comment la Ferme des Courtils sèche-t-elle ses plantes ?", "echelle_labels": ["Séchage doux", "Séchage standard", "Séchage rapide"], "actif": 0, "note_echelle": "Position indiquée d'après la description du séchoir publiée par la ferme.", "p": [
+      "La Ferme des Courtils sèche ses plantes en dessous de 35 °C, sur claies, pendant plusieurs jours, selon son site.",
+      "Un séchage lent garde les feuilles entières : en tasse, la verveine de la Ferme des Courtils donne une liqueur claire, à infuser cinq minutes à 90 °C."
+    ]},
+    "offre": {"h2": "Quelles plantes vend la Ferme des Courtils, et à quel prix ?", "p": [
+      "La Ferme des Courtils propose douze plantes en sachets de 50 et 100 g. Les trois références ci-dessous sont celles que la ferme met en avant."
+    ], "entetes": ["Plante", "Partie utilisée", "Format", "Prix", "Prix aux 100 g"], "lignes": [
+      ["Verveine citronnée", "Feuilles entières", "50 g", "6,50 €", "13,00 €"],
+      ["Menthe poivrée", "Feuilles", "100 g", "9,00 €", "9,00 €"],
+      ["Tilleul", "Bractées", "50 g", "7,00 €", "14,00 €"]
+    ], "releve": "Prix relevés le 01/10/2026 sur le site de la ferme. Susceptibles d'évoluer."},
+    "decision": {"h2": "Quelle plante choisir à la Ferme des Courtils ?", "p": ["Le choix dépend surtout du moment de la journée et du goût recherché."], "entetes": ["Tu cherches", "À la Ferme des Courtils", "Pourquoi"], "lignes": [
+      ["Une tisane du soir", "Tilleul", "Goût rond et miellé, sans amertume"],
+      ["Une infusion fraîche", "Menthe poivrée", "Feuilles larges, tient bien en infusion froide"],
+      ["Un parfum d'agrume", "Verveine citronnée", "Feuilles entières, parfum net"]
+    ]},
+    "prix": {"h2": "Les prix de la Ferme des Courtils sont-ils dans le marché ?", "echelle_max": 20, "unite": "€ aux 100 g", "note_jauge": "Relevés du même jour sur les sites des trois producteurs.", "jauge": [
+      ["Ferme des Courtils", 9, 14, "9 à 14 €"],
+      ["Jardins de la Loge", 8, 12, "8 à 12 €"],
+      ["Herbes du Layon", 11, 16, "11 à 16 €"]
+    ], "p": [
+      "La Ferme des Courtils se situe au milieu des deux producteurs comparés, à format égal.",
+      "L'écart tient surtout au tri des feuilles entières, plus long qu'un simple hachage."
+    ]},
+    "transparence": {"h2": "À qui la Ferme des Courtils ne convient-elle pas ?", "intro": "Trois cas où une autre adresse sera plus adaptée.", "items": [
+      ["Pas d'infusettes.", "La Ferme des Courtils ne vend que du vrac : il faut une boule ou une théière à filtre."],
+      ["Gamme courte.", "Douze plantes, pas de mélanges composés."],
+      ["Stocks saisonniers.", "Certaines plantes sont épuisées avant la récolte suivante."]
+    ]},
+    "acces": {"h2": "Où acheter les plantes de la Ferme des Courtils ?", "intro": "Quatre circuits, du plus direct au plus pratique.", "items": [
+      ["Le site de la ferme.", "C'est le circuit le plus court et le meilleur prix aux 100 g."],
+      ["La vente à la ferme.", "Le samedi matin, d'après le site officiel."],
+      ["Les coffrets Atelier Verveine.", "La ferme figure dans <a href=\"/products/coffret-soir\">le coffret Soir</a> et dans <a href=\"/products/coffret-mensuel\">le coffret mensuel</a> certains mois."],
+      ["Les marchés d'Angers.", "Deux marchés hebdomadaires, à vérifier sur le site de la ferme."]
+    ], "outro": ["Pour comparer d'autres plantes, <a href=\"/collections/all\">la boutique</a> regroupe tous les coffrets."]},
+    "comparatif": {"h2": "Ferme des Courtils, Jardins de la Loge ou Herbes du Layon ?", "intro": "Trois producteurs du même département, comparés sur les mêmes critères.", "entetes": ["Producteur", "Séchage", "Prix aux 100 g", "Gamme", "Point fort", "Point faible"], "lignes": [
+      ["Ferme des Courtils", "Doux", "9 à 14 €", "12 plantes", "Feuilles entières", "Pas d'infusettes"],
+      ["<a href=\"/blogs/producteurs/jardins-de-la-loge\">Jardins de la Loge</a>", "Standard", "8 à 12 €", "20 plantes", "Prix", "Feuilles hachées"],
+      ["<a href=\"/blogs/producteurs/herbes-du-layon\">Herbes du Layon</a>", "Doux", "11 à 16 €", "9 plantes", "Mélanges", "Tarifs plus élevés"]
+    ], "outro": "Les trois fiches suivent la même méthode de relevé."},
+    "avis": {"h2": "Que disent les avis sur la Ferme des Courtils ?", "note": "Aucune note publique relevée au 01/10/2026.", "p": ["La Ferme des Courtils n'a pas de fiche d'établissement publique : nous n'affichons donc aucune note."]},
+    "alternatives": {"intro": "Six producteurs proches par la région ou par le mode de séchage, tous présents dans <a href=\"/pages/nos-producteurs\">la liste complète des producteurs</a>.", "liste": [
+      ["jardins-de-la-loge", "Jardins de la Loge", "Maine-et-Loire, gamme large"],
+      ["herbes-du-layon", "Herbes du Layon", "Maine-et-Loire, mélanges"],
+      ["simples-du-bocage", "Simples du Bocage", "Mayenne, récolte sauvage"],
+      ["clos-des-menthes", "Clos des Menthes", "Sarthe, menthes"],
+      ["verger-aux-tilleuls", "Verger aux Tilleuls", "Indre-et-Loire, tilleul"],
+      ["champ-de-la-reine", "Champ de la Reine", "Loire-Atlantique, fleurs"]
+    ]}
+  },
+  "test_maison": null,
+  "faq": [
+    ["Où se trouve la Ferme des Courtils ?", "La Ferme des Courtils est installée au sud d'Angers, dans le Maine-et-Loire, sur deux hectares, d'après son site officiel."],
+    ["La Ferme des Courtils est-elle certifiée bio ?", "La Ferme des Courtils ne communique pas de certification sur son site au 01/10/2026."],
+    ["Combien coûtent les plantes de la Ferme des Courtils ?", "Les plantes de la Ferme des Courtils coûtent de 9 à 14 € les 100 g selon le relevé du 01/10/2026."],
+    ["La Ferme des Courtils vend-elle des infusettes ?", "Non, la Ferme des Courtils ne vend que des plantes en vrac."],
+    ["Peut-on visiter la Ferme des Courtils ?", "La Ferme des Courtils ouvre sa vente à la ferme le samedi matin, d'après son site."],
+    ["Comment infuser la verveine de la Ferme des Courtils ?", "La verveine de la Ferme des Courtils s'infuse cinq minutes dans une eau à 90 °C."],
+    ["Quelles plantes cultive la Ferme des Courtils ?", "La Ferme des Courtils cultive douze plantes, dont la verveine citronnée, la menthe poivrée et le tilleul."],
+    ["Où acheter les plantes de la Ferme des Courtils ?", "Les plantes de la Ferme des Courtils s'achètent sur son site, à la ferme, sur deux marchés d'Angers et dans les coffrets Atelier Verveine."]
+  ],
+  "etat_encart": "C",
+  "encart_texte": "Les plantes de la Ferme des Courtils entrent dans certains coffrets Atelier Verveine.",
+  "encart_cta": ["/products/coffret-mensuel", "Voir le coffret mensuel"],
+  "sources": [
+    "Site officiel de la Ferme des Courtils (pages Présentation, Boutique), consulté le 01/10/2026.",
+    "Relevés de prix Atelier Verveine du 01/10/2026 sur les sites des trois producteurs comparés."
+  ],
+  "decouvre_texte": "Les plantes de nos producteurs partenaires, livrées chaque mois.",
+  "decouvre_boutons": [["/products/coffret-mensuel", "Le coffret mensuel"], ["/collections/all", "Tous les coffrets"]],
+  "schema_about": {"url": "https://ferme-des-courtils.example/", "address": {"@type": "PostalAddress", "addressRegion": "Maine-et-Loire", "addressCountry": "FR"}}
+}

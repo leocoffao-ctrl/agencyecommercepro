@@ -1,0 +1,9 @@
+{
+  "name": "vk-seo",
+  "version": "0.1.0",
+  "description": "Audit SEO, visibilité dans les réponses des IA (GEO), données structurées, pages qui vendent, rédaction d'articles, branchés sur DataForSEO avec garde-fou de dépense.",
+  "author": {
+    "name": "Léo Butin"
+  },
+  "license": "MIT"
+}

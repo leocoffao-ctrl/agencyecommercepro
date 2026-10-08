@@ -1,0 +1,124 @@
+{
+  "_aide": "Configuration lue par les scripts du kit. Les skills lisent brand-context.md ; les scripts lisent ce fichier. Aucune clé d'API ici : elles restent dans des variables d'environnement.",
+  "brand": {
+    "name": "A_COMPLETER",
+    "legal_name": "",
+    "domain": "https://www.example.com",
+    "locale": "fr-FR",
+    "language": "fr",
+    "country": "France",
+    "currency": "EUR",
+    "register": "tu"
+  },
+  "site": {
+    "type": "ecommerce",
+    "platform": "shopify"
+  },
+  "seo": {
+    "location_name": "France",
+    "language_code": "fr",
+    "ask_above_usd": 0.1,
+    "run_budget_usd": 1.5,
+    "protected_pages": [
+      {
+        "url": "/collections/all",
+        "queries": [
+          "A_COMPLETER"
+        ]
+      }
+    ]
+  },
+  "voice": {
+    "banned_words": [
+      "premium",
+      "haut de gamme",
+      "incontournable",
+      "leader",
+      "meilleur du monde"
+    ],
+    "no_em_dash": true,
+    "max_emojis": 1
+  },
+  "blog": {
+    "handle": "blog",
+    "path_prefix": "/blogs/blog/",
+    "author": "La rédaction",
+    "template_suffix": "",
+    "theme_renders_h1": true,
+    "theme_emits_jsonld": [
+      "Article",
+      "BlogPosting",
+      "BreadcrumbList"
+    ],
+    "forbid_hardcoded_prices": true,
+    "faq_range": [
+      6,
+      8
+    ],
+    "min_internal_destinations": 4,
+    "articles_per_run": 3,
+    "cadence_days": 2,
+    "publish_time": "10:30",
+    "timezone": "Europe/Paris",
+    "required_ids": [
+      "reponse-rapide"
+    ],
+    "delivery_folder": "",
+    "backlog": "",
+    "platform_blog_id": ""
+  },
+  "directory": {
+    "commercial_patterns": [
+      "/collections/",
+      "/products/"
+    ],
+    "contact_path": "/pages/contact",
+    "utm_source": "A_COMPLETER",
+    "next_review": "",
+    "types": {
+      "partenaire": {
+        "label": "Partenaires",
+        "hub": "/pages/partenaires",
+        "path_prefix": "/blogs/partenaires/",
+        "cluster_patterns": [
+          "/blogs/partenaires/"
+        ],
+        "about_type": "Organization",
+        "forbidden_schema_types": [
+          "LocalBusiness",
+          "Product"
+        ],
+        "require_place_id": true,
+        "min_words": 1500,
+        "target_words": [
+          1800,
+          2600
+        ],
+        "max_words": 3000,
+        "quick_answer_items": 6,
+        "faq_items": 8
+      }
+    }
+  },
+  "social": {
+    "platforms": [
+      "instagram",
+      "linkedin"
+    ],
+    "hashtags_max": {
+      "instagram": 5,
+      "linkedin": 2
+    },
+    "brand_hashtags": [],
+    "cadence_days": 2,
+    "default_time": "12:30",
+    "timezone": "Europe/Paris",
+    "pillars": [],
+    "accounts": {},
+    "plan_folder": "",
+    "report_email": ""
+  },
+  "reels": {
+    "theme": "themes/demo.json"
+  }
+}

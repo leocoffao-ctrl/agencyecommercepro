@@ -1,0 +1,9 @@
+{
+  "name": "vk-marketing",
+  "version": "0.1.0",
+  "description": "Copywriting de pages, optimisation de conversion, flows email et créas publicitaires, calés sur le contexte de marque.",
+  "author": {
+    "name": "Léo Butin"
+  },
+  "license": "MIT"
+}

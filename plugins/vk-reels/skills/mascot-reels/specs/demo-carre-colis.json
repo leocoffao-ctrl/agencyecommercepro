@@ -1,0 +1,141 @@
+{
+  "mascot": "carre",
+  "filename": "demo-carre-colis",
+  "scenes": [
+    {
+      "universe": "carte",
+      "tone": "rose",
+      "texts": [
+        {
+          "t": "EN COULISSES",
+          "font": "pix",
+          "size": 52,
+          "y": 240,
+          "color": "papier",
+          "bg": "sombre"
+        },
+        {
+          "t": "D'où vient",
+          "font": "titre",
+          "size": 120,
+          "y": 330,
+          "color": "sombre"
+        },
+        {
+          "t": "ta commande ?",
+          "font": "titre",
+          "size": 120,
+          "y": 470,
+          "color": "accent",
+          "stroke": "papier"
+        }
+      ],
+      "props": [
+        {
+          "icon": "plane",
+          "scale": 2,
+          "x": 200,
+          "y": 24,
+          "bob": 2
+        }
+      ],
+      "mascot": {
+        "name": "carre",
+        "expr": "joie",
+        "scale": 3,
+        "y": 168,
+        "wave": true
+      },
+      "bubbles": [
+        "Bonjour ! Je te montre le trajet d'un colis, étape par étape."
+      ]
+    },
+    {
+      "universe": "carte",
+      "tone": "sable_c",
+      "props": [
+        {
+          "icon": "box",
+          "scale": 3,
+          "x": 24,
+          "y": 100,
+          "bob": 2
+        },
+        {
+          "type": "stamp",
+          "w": 44,
+          "h": 52,
+          "x": 190,
+          "y": 96,
+          "color": "corail"
+        }
+      ],
+      "texts": [
+        {
+          "t": "Préparé à la main",
+          "font": "titre",
+          "size": 96,
+          "y": 210,
+          "color": "sombre"
+        }
+      ],
+      "mascot": {
+        "name": "carre",
+        "expr": "normal",
+        "scale": 3,
+        "y": 182
+      },
+      "bubbles": [
+        "Remplace cette scène par un fait de ton contexte de marque.",
+        "Par exemple un délai, avec la date du relevé."
+      ]
+    },
+    {
+      "universe": "rayures",
+      "tone": "vert_c",
+      "props": [
+        {
+          "icon": "heart",
+          "scale": 2,
+          "x": 36,
+          "y": 150,
+          "bob": 2
+        },
+        {
+          "icon": "star",
+          "scale": 2,
+          "x": 196,
+          "y": 146,
+          "bob": 2,
+          "phase": 1.5
+        }
+      ],
+      "texts": [
+        {
+          "t": "Ta marque",
+          "font": "titre",
+          "size": 180,
+          "y": 220,
+          "color": "sombre"
+        },
+        {
+          "t": "TA SIGNATURE ICI",
+          "font": "pix",
+          "size": 60,
+          "y": 450,
+          "color": "papier",
+          "bg": "sombre"
+        }
+      ],
+      "mascot": {
+        "name": "carre",
+        "expr": "clin",
+        "scale": 3,
+        "y": 170
+      },
+      "bubbles": [
+        "Une question ? Écris-nous, on répond."
+      ]
+    }
+  ]
+}

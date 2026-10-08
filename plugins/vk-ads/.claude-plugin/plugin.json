@@ -1,0 +1,9 @@
+{
+  "name": "vk-ads",
+  "version": "0.1.0",
+  "description": "Audit publicitaire en lecture seule (Meta, Google) : mesure, attribution, rentabilité, structure, conformité.",
+  "author": {
+    "name": "Léo Butin"
+  },
+  "license": "MIT"
+}

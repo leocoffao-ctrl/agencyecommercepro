@@ -1,0 +1,22 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Dépendances du moteur vidéo
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg
+          pip install pillow numpy
+      - name: Cohérence du dépôt
+        run: python3 scripts/lint_repo.py
+      - name: Scripts sur les exemples
+        run: python3 tests/run_tests.py

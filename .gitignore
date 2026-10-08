@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.DS_Store
+# polices téléchargées au premier rendu
+plugins/vk-reels/skills/mascot-reels/scripts/fonts/
+# sorties locales
+sortie/
+out/
+tests/_tmp/
+# ne jamais versionner de secrets
+.env
+*.key

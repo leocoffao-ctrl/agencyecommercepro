@@ -1,0 +1,140 @@
+{
+  "brand": {
+    "name": "Atelier Verveine",
+    "legal_name": "Atelier Verveine SAS",
+    "domain": "https://www.example.com",
+    "locale": "fr-FR",
+    "language": "fr",
+    "country": "France",
+    "currency": "EUR",
+    "register": "tu"
+  },
+  "site": {
+    "type": "ecommerce",
+    "platform": "shopify"
+  },
+  "seo": {
+    "location_name": "France",
+    "language_code": "fr",
+    "ask_above_usd": 0.1,
+    "run_budget_usd": 1.5,
+    "protected_pages": [
+      {
+        "url": "/collections/all",
+        "queries": [
+          "acheter tisane en vrac"
+        ]
+      },
+      {
+        "url": "/products/coffret-mensuel",
+        "queries": [
+          "abonnement tisane",
+          "box tisane"
+        ]
+      }
+    ]
+  },
+  "voice": {
+    "banned_words": [
+      "bien-être",
+      "détox",
+      "rituel",
+      "premium",
+      "naturellement bon",
+      "ancestral",
+      "haut de gamme",
+      "incontournable"
+    ],
+    "no_em_dash": true,
+    "max_emojis": 1
+  },
+  "blog": {
+    "handle": "guides",
+    "path_prefix": "/blogs/guides/",
+    "author": "La rédaction Atelier Verveine",
+    "template_suffix": "guides",
+    "theme_renders_h1": true,
+    "theme_emits_jsonld": [
+      "Article",
+      "BlogPosting",
+      "BreadcrumbList"
+    ],
+    "forbid_hardcoded_prices": true,
+    "faq_range": [
+      6,
+      8
+    ],
+    "min_internal_destinations": 4,
+    "articles_per_run": 3,
+    "cadence_days": 2,
+    "publish_time": "10:30",
+    "timezone": "Europe/Paris",
+    "required_ids": [
+      "reponse-rapide"
+    ],
+    "delivery_folder": "",
+    "backlog": "",
+    "platform_blog_id": ""
+  },
+  "directory": {
+    "commercial_patterns": [
+      "/collections/",
+      "/products/"
+    ],
+    "contact_path": "/pages/contact",
+    "utm_source": "atelierverveine",
+    "next_review": "janvier 2027",
+    "types": {
+      "producteur": {
+        "label": "Producteurs",
+        "hub": "/pages/nos-producteurs",
+        "path_prefix": "/blogs/producteurs/",
+        "cluster_patterns": [
+          "/blogs/producteurs/"
+        ],
+        "about_type": "Organization",
+        "forbidden_schema_types": [
+          "LocalBusiness",
+          "Product"
+        ],
+        "require_place_id": true,
+        "min_words": 1500,
+        "target_words": [
+          1800,
+          2600
+        ],
+        "max_words": 3000,
+        "quick_answer_items": 6,
+        "faq_items": 8
+      }
+    }
+  },
+  "social": {
+    "platforms": [
+      "instagram",
+      "linkedin"
+    ],
+    "hashtags_max": {
+      "instagram": 5,
+      "linkedin": 2
+    },
+    "brand_hashtags": [
+      "#atelierverveine"
+    ],
+    "cadence_days": 2,
+    "default_time": "12:30",
+    "timezone": "Europe/Paris",
+    "pillars": [
+      "Plantes",
+      "Coffret",
+      "Producteurs",
+      "Coulisses"
+    ],
+    "accounts": {},
+    "plan_folder": "",
+    "report_email": ""
+  },
+  "reels": {
+    "theme": "themes/demo.json"
+  }
+}

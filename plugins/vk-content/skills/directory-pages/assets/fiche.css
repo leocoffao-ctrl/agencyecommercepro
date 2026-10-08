@@ -1,0 +1,171 @@
+/* vitrine-kit · pages d'annuaire · feuille de style
+   À charger par le gabarit des articles d'annuaire (jamais dans le corps de l'article).
+   Toutes les règles sont préfixées .vk-fiche ou ciblent un parent qui contient .vk-fiche.
+
+   Personnalisation : redéfinis les six variables de couleur ci-dessous avec la palette
+   du contexte de marque (§6), dans le thème ou dans un bloc :root.
+     --vk-primaire        titres de tableau, liens, encart            (texte blanc dessus : contraste ≥ 4,5:1)
+     --vk-primaire-clair  fond de la note d'avis
+     --vk-accent          appels à l'action, filets, puces            (texte blanc dessus : contraste ≥ 4,5:1)
+     --vk-accent-clair    fond du bloc « réponse rapide »
+     --vk-fond            fond des cartes de données
+     --vk-surlignage      badge « vérifiée », bouton de l'encart
+   Les sélecteurs de la règle 1 visent les conteneurs étroits des thèmes Shopify courants :
+   adapte-les au conteneur d'article de ton thème. */
+
+/* 1. Libérer la fiche du conteneur « lecture » étroit du thème */
+.page-width--narrow:has(.vk-fiche),
+.article-template__content:has(.vk-fiche),
+.rte:has(> .vk-fiche){max-width:none !important;width:100% !important;box-sizing:border-box !important;margin-left:auto !important;margin-right:auto !important}
+.rte:has(> .vk-fiche){padding:0 !important}
+
+/* 2. Base */
+.vk-fiche{--vk-primaire:#1f3a5f;--vk-primaire-clair:#e8eef6;--vk-accent:#c2410c;--vk-accent-clair:#fff3ec;--vk-fond:#f8f6f1;--vk-surlignage:#fde68a;
+  --vk-texte:#1d1d1b;--vk-gris:#6b6b66;--vk-ligne:#e6e2d8;--vk-rayon:18px;--vk-ombre:0 1px 2px rgba(29,29,27,.04),0 6px 24px rgba(29,29,27,.06);--vk-top:100px;
+  box-sizing:border-box;width:100%;max-width:1160px;min-width:0;margin:0 auto;padding:0 20px 3rem;
+  color:var(--vk-texte);font-size:16px;line-height:1.7;letter-spacing:normal;text-align:left;overflow-wrap:break-word}
+.vk-fiche *,.vk-fiche *::before,.vk-fiche *::after{box-sizing:border-box;min-width:0;letter-spacing:inherit}
+.vk-fiche p{margin:0 0 1rem;max-width:72ch}
+.vk-fiche h2{font-family:inherit;font-weight:800;color:var(--vk-texte);font-size:clamp(1.35rem,1.1rem + .9vw,1.75rem);line-height:1.2;margin:0 0 1rem;scroll-margin-top:calc(var(--vk-top) + 16px);text-transform:none}
+.vk-fiche h2::before{content:"";display:block;width:44px;height:5px;border-radius:99px;background:var(--vk-accent);margin-bottom:.8rem}
+.vk-fiche h3{font-family:inherit;font-weight:700;font-size:1rem;line-height:1.3;margin:0 0 .6rem;color:var(--vk-primaire);text-transform:none}
+.vk-fiche a{color:var(--vk-primaire);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.vk-fiche a:hover{color:var(--vk-accent)}
+.vk-fiche ul,.vk-fiche ol{margin:0 0 1rem;padding-left:1.2rem}
+.vk-fiche img{max-width:100%;height:auto}
+.vk-fiche strong{font-weight:700}
+
+/* 3. En-tête */
+.vk-fiche .vk-breadcrumb{font-size:.82rem;color:var(--vk-gris);margin:.5rem 0 1.25rem}
+.vk-fiche .vk-breadcrumb a{color:var(--vk-gris);text-decoration:none}
+.vk-fiche .vk-hero{background:#fff;border:1px solid var(--vk-ligne);border-radius:24px;box-shadow:var(--vk-ombre);padding:clamp(1.25rem,1rem + 1.5vw,2.25rem);margin-bottom:1.5rem}
+.vk-fiche .vk-hero img{display:block;width:100%;border-radius:16px;margin-top:1.25rem}
+.vk-fiche .vk-sous-titre{font-size:clamp(1.05rem,1rem + .35vw,1.3rem);line-height:1.5;font-weight:500;max-width:62ch;margin:0 0 1.25rem}
+.vk-fiche .vk-data{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.75rem;list-style:none;padding:0;margin:0 0 1.25rem}
+.vk-fiche .vk-data li{background:var(--vk-fond);border:1px solid var(--vk-ligne);border-radius:14px;padding:.75rem .9rem;font-size:.9rem;line-height:1.4;font-weight:600}
+.vk-fiche .vk-badges{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0}
+.vk-fiche .vk-badge{display:inline-flex;align-items:center;padding:.3rem .85rem;border-radius:999px;font-size:.78rem;font-weight:700;line-height:1.4;background:#fff;border:1px solid var(--vk-primaire);color:var(--vk-primaire)}
+.vk-fiche .vk-badge--partenaire{background:var(--vk-primaire);color:#fff}
+.vk-fiche .vk-badge--verif{background:var(--vk-surlignage);border-color:var(--vk-surlignage);color:var(--vk-texte)}
+
+/* 4. Réponse rapide */
+.vk-fiche .reponse-rapide{background:var(--vk-accent-clair);border:1px solid color-mix(in srgb, var(--vk-accent) 30%, #fff);border-radius:var(--vk-rayon);padding:1.4rem 1.6rem;margin:0 0 1.5rem}
+.vk-fiche .reponse-rapide>p{font-weight:800;font-size:1.05rem;margin:0 0 .75rem;color:var(--vk-accent)}
+.vk-fiche .reponse-rapide ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:.6rem 1.5rem}
+.vk-fiche .reponse-rapide li{position:relative;padding-left:1.6rem;margin:0;font-size:.95rem;line-height:1.55}
+.vk-fiche .reponse-rapide li::before{content:"✓";position:absolute;left:0;top:0;color:var(--vk-accent);font-weight:800}
+
+/* 5. Infos pratiques */
+.vk-fiche .vk-infos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:0 0 2.5rem}
+.vk-fiche .vk-infos>div{background:#fff;border:1px solid var(--vk-ligne);border-radius:var(--vk-rayon);padding:1.1rem 1.25rem;box-shadow:var(--vk-ombre)}
+.vk-fiche .vk-infos p{margin:.25rem 0;font-size:.9rem;line-height:1.5}
+
+/* 6. Mise en page : sommaire latéral + contenu */
+.vk-fiche .vk-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:1.5rem;align-items:start}
+.vk-fiche .vk-contenu>section,.vk-fiche .vk-contenu>aside{margin:0 0 3.5rem}
+.vk-fiche .vk-sommaire{background:#fff;border:1px solid var(--vk-ligne);border-radius:14px;padding:.6rem;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.vk-fiche .vk-sommaire-titre{display:none;font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--vk-gris);margin:0 0 .5rem .6rem}
+.vk-fiche .vk-sommaire ol{display:flex;gap:.4rem;width:max-content;list-style:none;padding:0;margin:0}
+.vk-fiche .vk-sommaire a{display:block;white-space:nowrap;text-decoration:none;font-size:.85rem;font-weight:600;color:var(--vk-texte);padding:.4rem .75rem;border-radius:999px;background:var(--vk-fond)}
+.vk-fiche .vk-sommaire a:hover{background:var(--vk-primaire);color:#fff}
+@media (min-width:1024px){
+  .vk-fiche .vk-layout{grid-template-columns:230px minmax(0,1fr);gap:3.5rem}
+  .vk-fiche .vk-sommaire{position:sticky;top:var(--vk-top);padding:1rem;overflow:visible}
+  .vk-fiche .vk-sommaire-titre{display:block}
+  .vk-fiche .vk-sommaire ol{flex-direction:column;width:auto;gap:.15rem;counter-reset:som}
+  .vk-fiche .vk-sommaire li{counter-increment:som}
+  .vk-fiche .vk-sommaire a{background:transparent;border-radius:10px;padding:.45rem .6rem;white-space:normal}
+  .vk-fiche .vk-sommaire a::before{content:counter(som,decimal-leading-zero);color:var(--vk-accent);font-weight:800;margin-right:.55rem;font-size:.78rem}
+}
+
+/* 7. Échelle à trois segments */
+.vk-fiche .vk-echelle{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;max-width:520px;margin:1.25rem 0 .4rem}
+.vk-fiche .vk-echelle span{display:block;text-align:center;font-size:.8rem;font-weight:700;padding:.55rem 0;border-radius:10px;background:#efe9dc;color:var(--vk-gris)}
+.vk-fiche .vk-echelle span.vk-actif{background:var(--vk-accent);color:#fff}
+.vk-fiche .vk-echelle-note{font-size:.82rem;color:var(--vk-gris);margin-bottom:1.25rem}
+
+/* 8. Tableaux */
+.vk-fiche .vk-table{width:100%;border-collapse:separate;border-spacing:0;font-size:.88rem;line-height:1.45;margin:1.25rem 0;background:#fff;border:1px solid var(--vk-ligne);border-radius:var(--vk-rayon);overflow:hidden;box-shadow:var(--vk-ombre)}
+.vk-fiche .vk-table th{background:var(--vk-primaire);color:#fff;text-align:left;padding:.75rem .8rem;font-weight:700;font-size:.8rem;vertical-align:bottom}
+.vk-fiche .vk-table td{border-top:1px solid var(--vk-ligne);padding:.7rem .8rem;vertical-align:top}
+.vk-fiche .vk-table tbody tr:hover td{background:var(--vk-fond)}
+.vk-fiche .vk-table td:first-child{font-weight:700}
+.vk-fiche .vk-releve{font-size:.8rem;color:var(--vk-gris);margin-top:-.5rem}
+
+/* 9. Jauge de prix comparés */
+.vk-fiche .vk-jauge{background:#fff;border:1px solid var(--vk-ligne);border-radius:var(--vk-rayon);padding:1.1rem 1.25rem;margin:1.25rem 0 .75rem;box-shadow:var(--vk-ombre)}
+.vk-fiche .vk-jauge-ligne{display:grid;grid-template-columns:190px 1fr 130px;align-items:center;gap:.9rem;font-size:.88rem;margin:.55rem 0}
+.vk-fiche .vk-jauge-ligne>span:first-child{font-weight:700}
+.vk-fiche .vk-jauge-ligne>span:last-child{text-align:right;color:var(--vk-gris);font-variant-numeric:tabular-nums}
+.vk-fiche .vk-jauge-barre{position:relative;height:14px;background:#efe9dc;border-radius:999px;overflow:hidden}
+.vk-fiche .vk-jauge-barre i{position:absolute;top:0;bottom:0;border-radius:999px;background:var(--vk-accent)}
+.vk-fiche .vk-jauge-barre i.vk-autre{background:var(--vk-primaire);opacity:.6}
+
+/* 10. Transparence */
+.vk-fiche .vk-transparence{background:#fff;border:2px dashed var(--vk-accent);border-radius:var(--vk-rayon);padding:1.25rem 1.5rem}
+.vk-fiche .vk-transparence ul{list-style:none;padding:0;margin:.5rem 0 0;display:grid;gap:.75rem}
+.vk-fiche .vk-transparence li{position:relative;padding-left:1.8rem;margin:0}
+.vk-fiche .vk-transparence li::before{content:"✕";position:absolute;left:0;top:0;color:var(--vk-accent);font-weight:800}
+.vk-fiche .vk-transparence strong{display:block}
+
+/* 11. Accès : où acheter, comment y aller */
+.vk-fiche .vk-achat{counter-reset:achat;list-style:none;padding:0;margin:0 0 1rem;display:grid;gap:.75rem}
+.vk-fiche .vk-achat li{counter-increment:achat;position:relative;background:#fff;border:1px solid var(--vk-ligne);border-radius:14px;padding:1rem 1.1rem 1rem 3.4rem}
+.vk-fiche .vk-achat li::before{content:counter(achat);position:absolute;left:1rem;top:1rem;width:1.75rem;height:1.75rem;border-radius:50%;background:var(--vk-primaire);color:#fff;text-align:center;line-height:1.75rem;font-size:.85rem;font-weight:800}
+.vk-fiche .vk-achat strong{display:block;margin-bottom:.15rem}
+.vk-fiche .vk-cta{display:inline-block;background:var(--vk-accent);color:#fff !important;text-decoration:none !important;font-weight:800;padding:.7rem 1.3rem;border-radius:999px;margin-top:.6rem;line-height:1.3;transition:transform .15s ease}
+.vk-fiche .vk-cta:hover{transform:translateY(-1px);color:#fff !important}
+
+/* 12. Avis */
+.vk-fiche .vk-avis-note{display:inline-block;background:var(--vk-primaire-clair);color:var(--vk-primaire);font-weight:700;border-radius:14px;padding:.8rem 1.1rem;max-width:none}
+
+/* 13. FAQ en accordéon */
+.vk-fiche .vk-faq details{background:#fff;border:1px solid var(--vk-ligne);border-radius:14px;margin:0 0 .6rem;padding:0}
+.vk-fiche .vk-faq summary{list-style:none;cursor:pointer;font-weight:700;padding:1rem 3rem 1rem 1.2rem;position:relative}
+.vk-fiche .vk-faq summary::-webkit-details-marker{display:none}
+.vk-fiche .vk-faq summary::after{content:"+";position:absolute;right:1.1rem;top:50%;transform:translateY(-50%);width:1.6rem;height:1.6rem;border-radius:50%;background:var(--vk-fond);text-align:center;line-height:1.6rem;font-weight:800;color:var(--vk-accent)}
+.vk-fiche .vk-faq details[open] summary::after{content:"–"}
+.vk-fiche .vk-faq details p{margin:0;padding:0 1.2rem 1.1rem}
+
+/* 14. Alternatives */
+.vk-fiche .vk-alternatives{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.9rem;list-style:none;padding:0;margin:1rem 0 0}
+.vk-fiche .vk-alternatives li{background:#fff;border:1px solid var(--vk-ligne);border-radius:14px;padding:1rem 1.1rem;transition:border-color .15s ease}
+.vk-fiche .vk-alternatives li:hover{border-color:var(--vk-accent)}
+.vk-fiche .vk-alternatives a{text-decoration:none}
+.vk-fiche .vk-alternatives strong{display:block;color:var(--vk-primaire);font-size:1rem;margin-bottom:.2rem}
+.vk-fiche .vk-alternatives span{font-size:.85rem;color:var(--vk-gris);line-height:1.45}
+
+/* 15. Encart marque */
+.vk-fiche .vk-encart-marque{background:var(--vk-primaire);color:#fff;border-radius:24px;padding:clamp(1.25rem,1rem + 1vw,2rem)}
+.vk-fiche .vk-encart-marque h2{color:#fff}
+.vk-fiche .vk-encart-marque h2::before{background:var(--vk-surlignage)}
+.vk-fiche .vk-encart-marque a{color:#fff}
+.vk-fiche .vk-encart-marque .vk-cta{background:var(--vk-surlignage);color:var(--vk-texte) !important}
+
+/* 16. Sources + découvre */
+.vk-fiche .vk-sources{font-size:.82rem;color:var(--vk-gris);border-top:1px solid var(--vk-ligne);padding-top:1.5rem}
+.vk-fiche .vk-sources h2{font-size:1.05rem}
+.vk-fiche .vk-sources h2::before{display:none}
+.vk-fiche .vk-sources li{margin:.3rem 0}
+.vk-fiche .vk-mention{font-style:italic}
+.vk-fiche .vk-decouvre{display:flex;flex-wrap:wrap;gap:.75rem;margin:1rem 0 0}
+
+/* 17. Mobile */
+@media (max-width:640px){
+  .page-width--narrow:has(.vk-fiche){padding-left:4px !important;padding-right:4px !important}
+  .vk-fiche{padding:0 14px 2rem}
+  .vk-fiche .vk-faq summary{line-height:1.4}
+  .vk-fiche .vk-data{grid-template-columns:1fr 1fr}
+  .vk-fiche .reponse-rapide{padding:1.1rem 1.1rem}
+  .vk-fiche .reponse-rapide ul{grid-template-columns:1fr}
+  .vk-fiche .vk-contenu>section,.vk-fiche .vk-contenu>aside{margin-bottom:2.5rem}
+  .vk-fiche .vk-table{border:0;background:transparent;box-shadow:none}
+  .vk-fiche .vk-table thead{display:none}
+  .vk-fiche .vk-table,.vk-fiche .vk-table tbody,.vk-fiche .vk-table tr,.vk-fiche .vk-table td{display:block;width:100%}
+  .vk-fiche .vk-table tr{background:#fff;border:1px solid var(--vk-ligne);border-radius:14px;margin:0 0 .75rem;padding:.35rem .2rem}
+  .vk-fiche .vk-table tbody tr:hover td{background:transparent}
+  .vk-fiche .vk-table td{border:0;padding:.3rem .8rem}
+  .vk-fiche .vk-table td::before{content:attr(data-label);display:block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--vk-gris)}
+  .vk-fiche .vk-jauge-ligne{grid-template-columns:1fr;gap:.25rem}
+  .vk-fiche .vk-jauge-ligne>span:last-child{text-align:left}
+}

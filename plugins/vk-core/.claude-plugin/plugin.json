@@ -1,0 +1,9 @@
+{
+  "name": "vk-core",
+  "version": "0.1.0",
+  "description": "Cerveau de marque générique : interview de cadrage, fichier brand-context.md lu par tous les autres plugins, et routeur « prochaine étape ». À installer en premier.",
+  "author": {
+    "name": "Léo Butin"
+  },
+  "license": "MIT"
+}

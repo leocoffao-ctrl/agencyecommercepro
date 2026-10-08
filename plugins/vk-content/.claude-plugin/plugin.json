@@ -1,0 +1,9 @@
+{
+  "name": "vk-content",
+  "version": "0.1.0",
+  "description": "Pipeline d'articles de blog de bout en bout (backlog, recherche, rédaction, contrôles, publication programmée) et pages d'annuaire sourcées avec scoring sur 100.",
+  "author": {
+    "name": "Léo Butin"
+  },
+  "license": "MIT"
+}

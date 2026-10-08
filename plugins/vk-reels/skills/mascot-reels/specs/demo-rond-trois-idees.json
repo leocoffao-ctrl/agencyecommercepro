@@ -1,0 +1,150 @@
+{
+  "mascot": "rond",
+  "filename": "demo-rond-trois-idees",
+  "scenes": [
+    {
+      "universe": "rayures",
+      "texts": [
+        {
+          "t": "LE SAVAIS-TU ?",
+          "font": "pix",
+          "size": 52,
+          "y": 240,
+          "color": "papier",
+          "bg": "sombre"
+        },
+        {
+          "t": "Une vidéo",
+          "font": "titre",
+          "size": 120,
+          "y": 330,
+          "color": "sombre"
+        },
+        {
+          "t": "écrite en JSON",
+          "font": "titre",
+          "size": 110,
+          "y": 470,
+          "color": "accent",
+          "stroke": "papier"
+        }
+      ],
+      "mascot": {
+        "name": "rond",
+        "expr": "joie",
+        "scale": 3,
+        "y": 168,
+        "wave": true
+      },
+      "bubbles": [
+        "Salut ! Cette vidéo sort d'un fichier de scénario, sans montage.",
+        "Chaque scène tient en quelques lignes."
+      ]
+    },
+    {
+      "universe": "tableau",
+      "bubble_shadow": "sable",
+      "props": [
+        {
+          "icon": "doc",
+          "scale": 3,
+          "x": 30,
+          "y": 100,
+          "bob": 2
+        },
+        {
+          "icon": "check",
+          "scale": 3,
+          "x": 170,
+          "y": 112,
+          "bob": 2,
+          "phase": 1.5
+        }
+      ],
+      "texts": [
+        {
+          "t": "Une idée par scène",
+          "font": "titre",
+          "size": 96,
+          "y": 210,
+          "color": "papier"
+        }
+      ],
+      "mascot": {
+        "name": "rond",
+        "expr": "normal",
+        "scale": 3,
+        "y": 182
+      },
+      "bubbles": [
+        "Un titre court, un ou deux accessoires, une ou deux bulles.",
+        "Au-delà de 80 caractères, on coupe la bulle en deux."
+      ]
+    },
+    {
+      "universe": "collines",
+      "tone": "sable_c",
+      "props": [
+        {
+          "icon": "sun",
+          "scale": 2,
+          "x": 30,
+          "y": 96,
+          "bob": 1
+        }
+      ],
+      "texts": [
+        {
+          "t": "Des faits vérifiés",
+          "font": "titre",
+          "size": 100,
+          "y": 210,
+          "color": "sombre"
+        }
+      ],
+      "mascot": {
+        "name": "rond",
+        "expr": "surpris",
+        "scale": 3,
+        "x": 146,
+        "y": 150,
+        "expr_after": "joie"
+      },
+      "bubbles": [
+        "Chaque chiffre affiché vient d'une source, avec sa date.",
+        "Sans source, la phrase sort du scénario."
+      ]
+    },
+    {
+      "universe": "rayures",
+      "tone": "rose",
+      "texts": [
+        {
+          "t": "Ta marque",
+          "font": "titre",
+          "size": 180,
+          "y": 220,
+          "color": "sombre"
+        },
+        {
+          "t": "TA SIGNATURE ICI",
+          "font": "pix",
+          "size": 60,
+          "y": 450,
+          "color": "papier",
+          "bg": "sombre"
+        }
+      ],
+      "mascot": {
+        "name": "rond",
+        "expr": "clin",
+        "scale": 3,
+        "y": 165
+      },
+      "bubbles": [
+        "Un seul appel à l'action pour finir.",
+        "Le lien est en bio !"
+      ]
+    }
+  ]
+}

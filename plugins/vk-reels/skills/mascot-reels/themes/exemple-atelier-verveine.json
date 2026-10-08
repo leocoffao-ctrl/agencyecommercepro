@@ -1,0 +1,26 @@
+{
+  "_aide": "Exemple de thème pour la marque fictive Atelier Verveine : palette du contexte de marque (§6) appliquée aux rôles et aux mascottes.",
+  "palette": {
+    "fond_marque": "#FBF7EE",
+    "texte_marque": "#1F2A1C",
+    "accent_marque": "#D9622B",
+    "accent_marque_f": "#B24C1E",
+    "vert_marque": "#3E7C4F",
+    "vert_marque_f": "#2C5B39",
+    "vert_marque_c": "#6FA57E",
+    "clair_marque": "#EFE3C8"
+  },
+  "roles": {
+    "fond": "clair_marque",
+    "accent": "accent_marque",
+    "texte": "texte_marque",
+    "encre": "texte_marque",
+    "papier": "fond_marque",
+    "sombre": "vert_marque_f",
+    "ombre_bulle": "accent_marque"
+  },
+  "mascots": {
+    "rond": {"base": "accent_marque", "shade": "accent_marque_f", "light": "clair_marque", "detail": "vert_marque_f", "blush": "rose", "voice": 640},
+    "carre": {"base": "vert_marque", "shade": "vert_marque_f", "light": "vert_marque_c", "detail": "clair_marque", "blush": "rose", "voice": 430}
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "vk-social",
+  "version": "0.1.0",
+  "description": "Audit hebdomadaire des posts, plan de la semaine, légendes par plateforme avec passe anti-IA, publication programmée et vérifiée via Zernio.",
+  "author": {
+    "name": "Léo Butin"
+  },
+  "license": "MIT"
+}

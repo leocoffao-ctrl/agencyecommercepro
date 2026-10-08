@@ -1,0 +1,9 @@
+{
+  "name": "vk-reels",
+  "version": "0.1.0",
+  "description": "Moteur de vidéos verticales en pixel art rendues par code : scénario JSON, mascottes, son 8-bit, couverture et storyboard.",
+  "author": {
+    "name": "Léo Butin"
+  },
+  "license": "MIT"
+}

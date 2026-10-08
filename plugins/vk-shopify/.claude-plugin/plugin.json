@@ -1,0 +1,9 @@
+{
+  "name": "vk-shopify",
+  "version": "0.1.0",
+  "description": "Code Liquid pour un thème Shopify en production : sections, snippets, schémas, métachamps, règles de sécurité du thème publié.",
+  "author": {
+    "name": "Léo Butin"
+  },
+  "license": "MIT"
+}

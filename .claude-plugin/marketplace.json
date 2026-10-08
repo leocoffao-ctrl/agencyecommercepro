@@ -1,0 +1,54 @@
+{
+  "name": "vitrine-kit",
+  "description": "Kit d'agents pour construire, référencer et faire vivre un site e-commerce ou vitrine : un contexte de marque partagé, des pipelines de contenu, des contrôles automatiques et des garde-fous.",
+  "owner": {
+    "name": "Léo Butin"
+  },
+  "plugins": [
+    {
+      "name": "vk-core",
+      "source": "./plugins/vk-core",
+      "description": "Cerveau de marque générique : interview de cadrage, fichier brand-context.md lu par tous les autres plugins, et routeur « prochaine étape ». À installer en premier."
+    },
+    {
+      "name": "vk-seo",
+      "source": "./plugins/vk-seo",
+      "description": "Audit SEO, visibilité dans les réponses des IA (GEO), données structurées, pages qui vendent, rédaction d'articles, branchés sur DataForSEO avec garde-fou de dépense."
+    },
+    {
+      "name": "vk-content",
+      "source": "./plugins/vk-content",
+      "description": "Pipeline d'articles de blog de bout en bout (backlog, recherche, rédaction, contrôles, publication programmée) et pages d'annuaire sourcées avec scoring sur 100."
+    },
+    {
+      "name": "vk-marketing",
+      "source": "./plugins/vk-marketing",
+      "description": "Copywriting de pages, optimisation de conversion, flows email et créas publicitaires, calés sur le contexte de marque."
+    },
+    {
+      "name": "vk-ads",
+      "source": "./plugins/vk-ads",
+      "description": "Audit publicitaire en lecture seule (Meta, Google) : mesure, attribution, rentabilité, structure, conformité."
+    },
+    {
+      "name": "vk-shopify",
+      "source": "./plugins/vk-shopify",
+      "description": "Code Liquid pour un thème Shopify en production : sections, snippets, schémas, métachamps, règles de sécurité du thème publié."
+    },
+    {
+      "name": "vk-design",
+      "source": "./plugins/vk-design",
+      "description": "Reprise du style d'un site de référence (structure et comportement, jamais le contenu) et reconstruction aux couleurs de la marque."
+    },
+    {
+      "name": "vk-social",
+      "source": "./plugins/vk-social",
+      "description": "Audit hebdomadaire des posts, plan de la semaine, légendes par plateforme avec passe anti-IA, publication programmée et vérifiée via Zernio."
+    },
+    {
+      "name": "vk-reels",
+      "source": "./plugins/vk-reels",
+      "description": "Moteur de vidéos verticales en pixel art rendues par code : scénario JSON, mascottes, son 8-bit, couverture et storyboard."
+    }
+  ]
+}

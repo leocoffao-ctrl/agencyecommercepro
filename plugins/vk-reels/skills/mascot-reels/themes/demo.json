@@ -1,0 +1,20 @@
+{
+  "_aide": "Thème de démonstration. Copie ce fichier, change les couleurs et les polices, et passe-le au moteur avec --theme.",
+  "palette": {},
+  "roles": {
+    "fond": "sable",
+    "accent": "corail",
+    "texte": "encre",
+    "papier": "creme",
+    "sombre": "nuit",
+    "ombre_bulle": "corail"
+  },
+  "fonts": {
+    "titre": {"file": "TitanOne.ttf", "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/titanone/TitanOne-Regular.ttf"},
+    "pix": {"file": "PixelifySans.ttf", "variation": "SemiBold", "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/pixelifysans/PixelifySans%5Bwght%5D.ttf"}
+  },
+  "mascots": {
+    "rond": {"base": "corail", "shade": "corail_f", "light": "sable", "detail": "vert_f", "blush": "rose", "voice": 640},
+    "carre": {"base": "vert", "shade": "vert_f", "light": "vert_c", "detail": "sable", "blush": "rose", "voice": 430}
+  }
+}

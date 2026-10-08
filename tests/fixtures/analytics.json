@@ -1,0 +1,5 @@
+{"posts": [
+ {"_id": "a", "status": "published", "platform": "instagram", "publishedAt": "2026-09-01T10:30:00Z", "mediaType": "carousel", "content": "Premier post de démonstration", "analytics": {"reach": 400, "views": 600, "likes": 20, "comments": 2, "shares": 6, "saves": 10, "follows": 1}},
+ {"_id": "b", "status": "published", "platform": "instagram", "publishedAt": "2026-09-03T10:30:00Z", "mediaType": "reel", "content": "Deuxième post de démonstration", "analytics": {"reach": 1200, "views": 2000, "likes": 60, "comments": 5, "shares": 30, "saves": 22, "follows": 4}},
+ {"_id": "c", "status": "failed", "platform": "instagram", "content": "Post en échec"}
+]}

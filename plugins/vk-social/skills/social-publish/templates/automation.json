@@ -1,0 +1,11 @@
+{
+  "_comment": "Copier, remplir, puis POST https://zernio.com/api/v1/automations (Bearer). Une automatisation par mot-clé et par post. La montrer à l'utilisateur avant isActive:true : elle écrit à une vraie audience. Lien sur le domaine canonique, avec UTM.",
+  "profileId": "<profileId Zernio — GET /profiles>",
+  "accountId": "<accountId Instagram ou Facebook — GET /accounts>",
+  "platformPostId": "<id du post surveillé>",
+  "name": "GUIDE — envoi du guide",
+  "keywords": "GUIDE",
+  "dmMessage": "Bonjour ! Voici le guide : https://www.example.com/guide?utm_source=instagram&utm_medium=dm&utm_campaign=guide-commentaire. Une question dessus ?",
+  "commentReply": "C'est envoyé en message privé.",
+  "isActive": false
+}

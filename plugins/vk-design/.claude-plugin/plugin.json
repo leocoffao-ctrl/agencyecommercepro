@@ -1,0 +1,9 @@
+{
+  "name": "vk-design",
+  "version": "0.1.0",
+  "description": "Reprise du style d'un site de référence (structure et comportement, jamais le contenu) et reconstruction aux couleurs de la marque.",
+  "author": {
+    "name": "Léo Butin"
+  },
+  "license": "MIT"
+}
