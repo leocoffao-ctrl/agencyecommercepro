@@ -1,0 +1,128 @@
+{
+  "_aide": "État de synchronisation du kit avec le projet d'origine : empreinte de chaque skill source au dernier passage, et skills du kit qui en dérivent. Mis à jour par la procédure kit-sync.",
+  "dernier_passage": "2026-10-08",
+  "sources": {
+    "coffao-ad-creative": {
+      "cible": [
+        "vk-marketing/ad-creative"
+      ],
+      "empreinte": "f3d82ede6ae2870819edb36d1519a48c5db1b476806fd5fb940a0c8a98651d68"
+    },
+    "coffao-ads-audit": {
+      "cible": [
+        "vk-ads/ads-audit"
+      ],
+      "empreinte": "24142435a34d80afcec8836e2b3096a15237c7822a8f5f7dd27774938726570a"
+    },
+    "coffao-blog-hebdo": {
+      "cible": [
+        "vk-content/blog-pipeline"
+      ],
+      "empreinte": "0113e7ab81b5c0f3722a1b68884b7c878c366685cf2ca1c6ce0df3e1a3ba2a70"
+    },
+    "coffao-contexte": {
+      "cible": [
+        "vk-core/brand-context",
+        "vk-core/setup"
+      ],
+      "empreinte": "2403391862b7d4afa51ec9872e2c4d68a18ceef3513fb9c8a2e19ea5f049adb7"
+    },
+    "coffao-copywriting": {
+      "cible": [
+        "vk-marketing/copywriting"
+      ],
+      "empreinte": "42362642371dfb14068fef528eb4fac687ea7c233009ff9e7b053c8e22128dbb"
+    },
+    "coffao-cro": {
+      "cible": [
+        "vk-marketing/cro"
+      ],
+      "empreinte": "baa4ad9c7fcfb14e1af1af76b0804d20a1bcc8250ae9f8a77897f67a36dcebee"
+    },
+    "coffao-emails": {
+      "cible": [
+        "vk-marketing/email-flows"
+      ],
+      "empreinte": "cedc5cf45925ba57d2180bc4a40229e6f5419495f8617f968c51aff12ba18902"
+    },
+    "coffao-fiches-coffee-shops": {
+      "cible": [
+        "vk-content/directory-pages"
+      ],
+      "empreinte": "6b994201f9c934809a0d3e2e5d72a948ba96fb086f85f072c1920f63e3129a92"
+    },
+    "coffao-fiches-torrefacteurs": {
+      "cible": [
+        "vk-content/directory-pages"
+      ],
+      "empreinte": "676997db068d7b91014c7987e46b2c155935d429b98816e400d3365122dd6f44"
+    },
+    "coffao-mascottes-reels": {
+      "cible": [
+        "vk-reels/mascot-reels"
+      ],
+      "empreinte": "35f0fe6d48295feeab10277d7377471f913a4927fb7f3b6beebcbd4241f1f51c"
+    },
+    "coffao-reseaux-plan": {
+      "cible": [
+        "vk-social/social-plan"
+      ],
+      "empreinte": "c5b8df58d2f8e27044d121eb231aea8f98fa248f0030603d10a15e3c6a010e0e"
+    },
+    "coffao-reseaux-sociaux": {
+      "cible": [
+        "vk-social/social-publish"
+      ],
+      "empreinte": "19d58a383167cfc71d6aaf9ba6fd6a92bb90ba5fbedd1f45464d147c2701abc7"
+    },
+    "coffao-seo-audit": {
+      "cible": [
+        "vk-seo/seo-audit"
+      ],
+      "empreinte": "d8ebcf1f35b8254a86caef5493dd1c26f483bb5924ec5c2ded6a88907553c86e"
+    },
+    "coffao-seo-dataforseo": {
+      "cible": [
+        "vk-seo/seo-data"
+      ],
+      "empreinte": "2b590ab10d1355807b371f0ef8caf27734126765fa4a17be45612357ae097cc3"
+    },
+    "coffao-seo-ecommerce": {
+      "cible": [
+        "vk-seo/seo-pages"
+      ],
+      "empreinte": "155ddd51b0634336fb5fc776b6b03149ab452bc2ff0337f5a88c9a32c5a81786"
+    },
+    "coffao-seo-geo": {
+      "cible": [
+        "vk-seo/seo-geo"
+      ],
+      "empreinte": "601af586d87e84e326e8374458f3936fcde7bbd22845ee0c09cbb80720ed4790"
+    },
+    "coffao-seo-schema": {
+      "cible": [
+        "vk-seo/seo-schema"
+      ],
+      "empreinte": "f4136b5d90453453a3d09f687e0a805b25cec835f30c44b42a2fa2da7035846b"
+    },
+    "coffao-shopify-liquid": {
+      "cible": [
+        "vk-shopify/shopify-liquid"
+      ],
+      "empreinte": "0c9d784ae27de4d784d9de23b53dc7214bebb03889f3d7532a9e6cb8c590c01b"
+    },
+    "coffao-site-clone": {
+      "cible": [
+        "vk-design/site-clone"
+      ],
+      "empreinte": "62a2f22451ffec61396b0aa1240276282f407f3816bdc3a833f2390f766d9712"
+    },
+    "prompt-expert-seo-v2": {
+      "cible": [
+        "vk-seo/seo-writer"
+      ],
+      "empreinte": "e843d0c509e3c78cd200a3a92caeb4f4d3d5525e58c2004d96ed808a2d999480"
+    }
+  },
+  "nouveaux_skills_vus": []
+}
