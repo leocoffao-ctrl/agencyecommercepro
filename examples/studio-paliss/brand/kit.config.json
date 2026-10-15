@@ -74,7 +74,9 @@
     ],
     "delivery_folder": "",
     "backlog": "",
-    "platform_blog_id": ""
+    "platform_blog_id": "",
+    "external_max": 4,
+    "external_rel": "nofollow"
   },
   "social": {
     "platforms": [

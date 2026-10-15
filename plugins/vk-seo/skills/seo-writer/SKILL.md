@@ -21,7 +21,9 @@ Trois éléments du contexte commandent tout l'article :
 ## Variables à remplir avant de commencer
 
 ```
-MOT_CLE_PRINCIPAL    =
+MOT_CLE_PRINCIPAL    =            ← la cible réellement atteignable (longue traîne si besoin)
+TERME_PIVOT          =            ← le mot générique, dans H1, title et slug, sans en faire la cible
+REGISTRE             = documentaire | pratique   ← voir references/registres.md
 REQUETES_SECONDAIRES =
 REQUETES_EXCLUES     =            ← celles que gardent les pages commerciales
 INTENTION            = définitionnelle | décisionnelle | comparative | économique
@@ -33,6 +35,8 @@ CONCURRENTS_TOP5     =            ← URL réelles relevées le jour même
 ```
 
 ## Phase 0 — Blocage
+
+Si l'utilisateur fournit un brief rédigé (rôle, faits vérifiés, interdictions, maillage), range-le dans le gabarit de `references/registres.md` §5 et applique-le : ses faits forment une liste fermée, ses interdictions s'ajoutent à celles de ce skill. Ce qui contredit le contexte de marque (registre de politesse, requête protégée) se signale avant d'écrire.
 
 Rends les conclusions des cinq contrôles avant de rédiger. Si l'un échoue, arrête-toi et dis-le.
 
@@ -65,7 +69,11 @@ Test : si un concurrent pouvait écrire cette phrase sans mentir, la thèse est 
 - Deux sources fiables qui se contredisent : on présente la contradiction, on ne tranche pas.
 - Une donnée invérifiable sort. Pas de « environ », pas de chiffre repris d'un concurrent.
 
+- Une origine discutée ou une appellation contestée s'écrit comme telle ; une légende contredite par les dates se présente comme une légende. Aucune quantité, température ou durée inventée : la consigne reste qualitative.
+
 Produis le tableau `FAIT | SOURCE | DATE DE RELEVÉ | NIVEAU DE CERTITUDE`.
+
+**0.6 Cible atteignable.** Si le mot-clé est un terme générique à très fort volume sans aucune impression dans la Search Console, ne le vise pas : choisis une cible de longue traîne et garde le générique comme terme pivot (`references/registres.md` §2).
 
 **0.5 Contrôle arithmétique.** Pour chaque chiffre repris, pose une question d'ordre de grandeur : est-il cohérent avec les autres chiffres de la page et avec les totaux connus du secteur ? Un chiffre incohérent s'écarte, et peut devenir une section : démontrer qu'un chiffre en circulation est faux crédibilise la page.
 
@@ -90,7 +98,9 @@ Produis le tableau `FAIT | SOURCE | DATE DE RELEVÉ | NIVEAU DE CERTITUDE`.
 
 **Tableau de décision** : `Votre situation` → `Ce qu'il faut faire` → `Pourquoi`. En-têtes autoportants, une ligne par cas, cellules complètes. Jamais d'image de tableau.
 
-Si le gabarit du site affiche déjà le titre en H1 (contexte §7, `blog.theme_renders_h1`), le corps ne contient pas de `<h1>`.
+Si le gabarit du site affiche déjà le titre en H1 (contexte §7, `blog.theme_renders_h1`), le corps ne contient pas de `<h1>` et commence au H2 : une série d'objets se range sous un H2 qui l'annonce, un H3 par objet, jamais H1 puis H3.
+
+**Registre.** Cette structure est celle du registre documentaire. Le registre pratique (recette, mode d'emploi) l'allège : chapeau, réponse rapide courte, un bloc par objet en prose, section qui ramène à l'offre, FAQ, clôture courte. Détail et choix dans `references/registres.md`.
 
 ## Phase 1 bis — Architecture anti-péremption
 
@@ -133,7 +143,10 @@ Dès que l'article contient des prix, des cours ou des statistiques :
 - Chiffre amené à bouger écrit en dur (nombre de partenaires, de références, d'avis) : formulation qualitative.
 - Requête transactionnelle d'une page protégée.
 - Millésime dans le slug.
-- Ponctuation exclue par le contexte §5.
+- Ponctuation exclue par le contexte §5 ; point d'exclamation et emoji dans un titre.
+- Première personne sur une expérience qui n'a pas eu lieu : on n'écrit pas « j'ai goûté », « à Lecce, j'ai bu » sans l'avoir vécu.
+- Allégation santé, même reprise d'une source ; conseil sur la grossesse, un traitement ou une pathologie (renvoi au professionnel).
+- Attribution nominative qu'aucune source ne fait.
 
 ## Phase 3 — Maillage
 
@@ -147,7 +160,9 @@ Rends la liste exacte des liens, avec ancre rédigée et emplacement.
 
 Hiérarchie des destinations : niveau 1 commercial, niveau 2 pivots, niveau 3 satellites. Un lien vers le pivot commercial, placé à un moment de décision. Ancres intégrées à une phrase, trois variantes par destination à l'échelle du site, jamais l'expression clé seule. Dans le fil d'Ariane, l'échelon intermédiaire pointe vers la page commerciale.
 
-Chaque lien interne doit répondre 200 le jour de la rédaction.
+Chaque lien interne doit répondre 200 **sans redirection** le jour de la rédaction. Deux URL proches pour le même sujet : vise celle qui reste et signale la paire dans le brief.
+
+Liens externes : deux à quatre, vers des sources de référence, jamais vers un concurrent, avec l'attribut `rel` de la configuration (`blog.external_rel`).
 
 Format : `ANCRE | URL | section | niveau | raison`.
 
@@ -162,7 +177,7 @@ Format : `ANCRE | URL | section | niveau | raison`.
 
 Si la requête nue appartient à une page commerciale, le title s'ouvre sur un modifieur (« Comparer… », « Choisir… »).
 
-JSON-LD : seulement les types que le gabarit n'émet pas déjà (`blog.theme_emits_jsonld`). `FAQPage` strictement identique à la FAQ visible si on en produit un ; `ItemList` pour un classement. Jamais d'`aggregateRating` sans avis affichés.
+JSON-LD : seulement les types que le gabarit n'émet pas déjà (`blog.theme_emits_jsonld`). `FAQPage` strictement identique à la FAQ visible si on en produit un ; `ItemList` pour un classement. `Recipe` seulement pour une page qui porte une recette unique : un article qui en présente sept reste en `Article` + `FAQPage`, sinon il faut sept pages. Jamais d'`aggregateRating` sans avis affichés.
 
 Image d'en-tête : 1200 × 630, WebP, moins de 150 Ko, dimensions déclarées, nom de fichier égal au slug, texte alternatif descriptif.
 
@@ -173,7 +188,7 @@ python3 scripts/article_checks.py article.html --config brand/kit.config.json \
   --handle <slug> --title "<titre affiché>" --seo-title "<title>" --seo-description "<meta>"
 ```
 
-Le script bloque sur : slug invalide ou millésimé, title ou meta trop longs, title identique au titre, ponctuation exclue, commentaire HTML ou H1 dans le corps, prix en dur, `aggregateRating`, variable non résolue, section de réponse rapide absente, FAQ visible différente de la FAQ du schema, JSON-LD redondant avec le gabarit, balises non fermées, mots bannis, lien interne qui ne répond pas 200. Corrige jusqu'au code de sortie 0.
+Le script bloque sur : niveau de titre sauté, lien interne qui redirige, slug invalide ou millésimé, title ou meta trop longs, title identique au titre, ponctuation exclue, commentaire HTML ou H1 dans le corps, prix en dur, `aggregateRating`, variable non résolue, section de réponse rapide absente, FAQ visible différente de la FAQ du schema, JSON-LD redondant avec le gabarit, balises non fermées, mots bannis, lien interne qui ne répond pas 200. Corrige jusqu'au code de sortie 0.
 
 Puis remplis la checklist, avec la preuve à côté :
 

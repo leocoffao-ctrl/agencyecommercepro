@@ -61,8 +61,8 @@ Applique `seo-writer` en entier, avec les écarts que le gabarit du site impose 
 1. **Pas de `<h1>` dans le corps** si le gabarit affiche déjà le titre. Le titre d'accroche devient le champ titre de l'article ; le title SEO va dans le champ SEO.
 2. **Pas de commentaire HTML dans le corps.** Brief, faits et tâches vont dans `BRIEF-<slug>.md`.
 3. **JSON-LD** : seulement les types que le gabarit n'émet pas.
-4. **Chaque lien interne répond 200** au moment du run. Un lien vers un article du même lot est autorisé.
-5. **Registre** : celui du contexte §5. Si les articles déjà publiés en utilisent un autre, signale-le une fois et suis le contexte.
+4. **Chaque lien interne répond 200 sans redirection** au moment du run ; une paire d'URL en double se signale au récapitulatif. Un lien vers un article du même lot est autorisé.
+5. **Registre** : politesse et ton du contexte §5. Si les articles déjà publiés en utilisent un autre, signale-le une fois et suis le contexte. Registre éditorial (documentaire ou pratique) : colonne `Registre` du backlog si elle existe, sinon choisi selon `seo-writer`, `references/registres.md`. Une ligne de backlog qui porte un brief rédigé (faits vérifiés, interdictions) se traite comme une liste fermée.
 6. Gabarit du corps, identique d'un article à l'autre : signature datée → bandeau de méthode si données périssables → réponse rapide (`id="reponse-rapide"`) → sommaire → bloc de données daté → sections H2 avec `id` → tableau de décision → checklist → limites → FAQ en `<details><summary>` → à lire ensuite → sources → JSON-LD.
 7. Longueur indicative : 1 800 à 2 800 mots. Qualité avant volume : un article qui ne passe pas le test final ne sort pas, et le récapitulatif le dit.
 

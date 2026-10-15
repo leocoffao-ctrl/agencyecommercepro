@@ -29,6 +29,8 @@ DEFAULTS = {
         "required_ids": ["reponse-rapide"],
         "faq_range": [6, 8],
         "min_internal_destinations": 4,
+        "external_max": 0,
+        "external_rel": "",
     },
 }
 CURRENCY_SIGNS = {"EUR": "€", "USD": r"\$", "GBP": "£", "CHF": "CHF", "CAD": r"\$"}
@@ -55,11 +57,15 @@ def visible_text(src):
 
 
 def http_status(url):
+    """Statut de la première réponse, sans suivre les redirections : « 301 → /cible » si l'URL redirige."""
     try:
         out = subprocess.run(
-            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", "-A", "Mozilla/5.0", "-L", "-m", "15", url],
+            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code} %{redirect_url}", "-A", "Mozilla/5.0", "-m", "15", url],
             capture_output=True, text=True)
-        return out.stdout.strip() or "ERR"
+        code, _, target = (out.stdout.strip() or "ERR").partition(" ")
+        if code.startswith("3") and target:
+            return f"{code} → {re.sub(r'^https?://[^/]+', '', target)}"
+        return code
     except Exception:
         return "ERR"
 
@@ -117,6 +123,16 @@ def check(article, body, cfg, pending_handles=(), network=True):
         if f'id="{required}"' not in b:
             errs.append(f"section #{required} absente")
 
+    levels = [(int(m.group(1)), visible_text(m.group(2)))
+              for m in re.finditer(r"<h([1-6])[^>]*>(.*?)</h\1>", b, re.S)]
+    prev = 1 if blog.get("theme_renders_h1", True) else 0
+    for lvl, txt in levels:
+        if prev and lvl > prev + 1:
+            errs.append(f"niveau de titre sauté : H{prev} puis H{lvl} « {txt[:50]} »")
+        prev = lvl
+        if "!" in txt or re.search("[\U0001F300-\U0001FAFF\u2600-\u27BF]", txt):
+            warns.append(f"point d'exclamation ou emoji dans un titre : « {txt[:50]} »")
+
     text = visible_text(b)
     banned = [w for w in voice.get("banned_words", []) if re.search(rf"(?i)(?<![\w-]){re.escape(w)}(?![\w-])", text)]
     if banned:
@@ -160,15 +176,26 @@ def check(article, body, cfg, pending_handles=(), network=True):
                 continue
             status = http_status(domain + path)
             if status != "200":
-                bad.append(f"{path} → {status}")
+                bad.append(f"{path} : {status}")
         if bad:
-            errs.append("liens internes cassés : " + ", ".join(bad))
+            errs.append("liens internes cassés ou redirigés (pointer l'URL finale) : " + ", ".join(bad))
     elif not domain:
         warns.append("brand.domain absent de la configuration : liens internes non testés")
     if domain:
         host = re.escape(re.sub(r"^https?://(www\.)?", "", domain))
         if re.search(rf'href="https?://(www\.)?{host}', b):
             warns.append("lien absolu vers le site : préférer un chemin relatif")
+
+    externals = re.findall(r'<a\b[^>]*href="https?://[^"]+"[^>]*>', b)
+    if domain:
+        externals = [a for a in externals if not re.search(rf'href="https?://(www\.)?{host}', a)]
+    if blog.get("external_max") and len(externals) > blog["external_max"]:
+        warns.append(f"{len(externals)} liens externes (maximum {blog['external_max']})")
+    rel = blog.get("external_rel")
+    if rel:
+        missing = [a for a in externals if not re.search(rf'rel="[^"]*\b{rel}\b', a)]
+        if missing:
+            warns.append(f"{len(missing)} lien(s) externe(s) sans rel=\"{rel}\"")
 
     words = len(text.split())
     stats = {"mots": words, "liens": len(links), "destinations": len(dest), "faq": faq_visible,

@@ -51,6 +51,10 @@ run("article fautif bloqué", [checks, os.path.join(FIX, "article-fautif.html"),
                                "--handle", "guide-2026"], expect=1,
     contains=["millésime", "commentaire HTML", "<h1>", "tiret cadratin", "prix en dur", "mots bannis", "déjà émis", "reponse-rapide"])
 
+run("article : niveaux sautés et liens externes", [checks, os.path.join(FIX, "article-niveaux.html"), "--config", CFG,
+                                                     "--no-network"], expect=1,
+    contains=["niveau de titre sauté : H1 puis H3", "point d'exclamation ou emoji"])
+
 build = P("vk-content", "skills", "blog-pipeline", "scripts", "build_articles.py")
 run("lot d'articles → CSV Matrixify", [build, os.path.join(FIX, "manifest-lot.json"),
                                        os.path.join(TMP, "Blog Posts - test.csv"), "--config", CFG, "--no-network"], expect=0)

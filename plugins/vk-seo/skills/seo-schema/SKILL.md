@@ -35,6 +35,7 @@ Compare avec ce que le contexte §7 annonce comme déjà émis.
 | Entreprise qui reçoit du public | `LocalBusiness` ou son sous-type exact, avec adresse et horaires vérifiés |
 | Page de service | `Service` relié au fournisseur (`provider`), zone desservie |
 | Article, guide | `BlogPosting` ou `Article` (auteur, dates, image) + `BreadcrumbList` |
+| Recette | `Recipe` seulement si la page porte **une** recette. Un article qui en présente plusieurs reste en `Article` + `FAQPage` : un `Recipe` unique y serait faux, plusieurs `Recipe` sur une page ne sont pas éligibles aux résultats enrichis |
 | Page d'annuaire sur un tiers | `Article` dont `about` décrit l'entité (voir `directory-pages`). Jamais le type commercial de l'entité en racine : le site écrit sur elle, il n'est pas elle |
 | Événement, atelier daté | `Event` seulement si les dates sont réelles et à jour ; sinon `Service` |
 
