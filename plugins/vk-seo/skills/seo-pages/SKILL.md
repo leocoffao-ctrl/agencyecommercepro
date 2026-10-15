@@ -23,7 +23,7 @@ Lis la page et, si la plateforme en expose, les données brutes du produit (prix
 
 **Meta description** (155 caractères au plus) — mot-clé, bénéfice, prix de départ ou condition forte (livraison, engagement), tirés du contexte §2.
 
-**H1** unique, égal au nom du produit. Pas de H1 dupliqué par la navigation ou un gabarit partagé.
+**H1** unique, égal au nom du produit. Pas de H1 dupliqué par la navigation ou un gabarit partagé : vérifie panier vide et panier plein avec `scripts/check_hn.py` (skill `seo-audit`).
 
 **Contenu** (200 mots uniques au moins, jamais la même description copiée entre produits) :
 - à qui le produit convient, et à qui il ne convient pas ;

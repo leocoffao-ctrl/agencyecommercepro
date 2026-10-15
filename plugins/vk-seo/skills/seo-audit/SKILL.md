@@ -30,6 +30,12 @@ Présente les chiffres en valeur **et en pourcentage**, avec une comparaison (p�
 
 **Balises** — title, meta description, H1 : manquants, dupliqués, trop longs, par groupe de pages.
 
+**Plan des titres Hn** — un seul H1 par page, placé avant tout autre H1 dans le code ; niveaux sans saut ; aucun titre vide, aucun emoji. Les titres de gabarit (tiroir panier, compte, liste de souhaits, notification d'ajout, pop-up de remise, blocage par pays, cookies) se signalent à part : ils sont sur chaque page, donc une correction dans le thème vaut pour tout le site. Sur une boutique, fais **deux passages** : panier vide (ce que voit Googlebot) et panier plein (ce que voient les outils de crawl qui gardent les cookies, et les visiteurs). Plusieurs titres de gabarit, dont un H1 « Votre panier » glissé avant le H1 de la page, n'apparaissent qu'au second.
+```bash
+python3 scripts/check_hn.py https://exemple.fr/ https://exemple.fr/pages/offre --cart-variant <id_variante>
+```
+Le script liste le plan de chaque page, marque les titres de gabarit et sort en erreur sur zéro ou plusieurs H1. Une liste de titres reçue d'un outil tiers se revérifie avec lui avant d'entrer dans le plan d'action : l'état du panier change le résultat.
+
 **Contenu** — nombre de mots par groupe, pages minces, duplication entre pages proches. Deux pages qui se concurrencent se signalent ; on ne supprime rien, l'utilisateur tranche.
 
 **Architecture** — profondeur de clic, maillage interne, pages orphelines, liens vers des 404.
@@ -52,6 +58,7 @@ Lis la plateforme dans le contexte §7 et applique la liste qui correspond.
 - `/search`, `/cart`, `/account` : non indexables par défaut, à vérifier.
 - Slugs abîmés par des caractères accentués : proposer un slug propre et une 301, sans rien supprimer.
 - Pages de politique générées par défaut : vérifier qu'elles ne contredisent pas les CGV.
+- Titres Hn du thème et des blocs d'application (tiroir panier, liste de souhaits, notification, remise, blocage par pays) : à passer en `<p>` ou `<div>` en gardant la classe. Le texte d'un bloc en texte enrichi (blocage par pays, bandeau) se corrige dans le personnalisateur, pas dans le code. Une chaîne restée en anglais dans le HTML servi se traduit.
 
 **WordPress / WooCommerce**
 - Archives d'auteur, de date et de tags : indexation à maîtriser.

@@ -44,6 +44,7 @@ Avant d'écrire, repère dans le thème :
 - Toujours `| escape` pour du texte dans un attribut, `| json` pour une valeur dans un `<script>`.
 - Couleurs depuis la palette du contexte §6, exposées en variables CSS.
 - Accessibilité : HTML sémantique (`<details>`/`<summary>` pour une FAQ, `<button>` pour une action), contraste de 4,5:1 au moins, focus visible.
+- Titres `<h1>` à `<h6>` réservés au contenu de la page. Ce qui sert l'interface (tiroir panier, compte, liste de souhaits, notification, fenêtre modale, message d'état vide, libellé de filtre) s'écrit en `<p>` ou `<div>` avec la classe de style d'origine (`h2`, `h5`, `title`…), et la fenêtre garde son nom accessible par `aria-label` ou `aria-labelledby`. Avant de changer une balise, cherche dans `assets/` les sélecteurs qui la visent par son nom (`querySelector('h2')`, `.totals>h2`) et reporte-les sur la classe.
 
 ## Contrôles avant livraison
 
@@ -59,6 +60,7 @@ Avant d'écrire, repère dans le thème :
 2. Balises Liquid équilibrées (`if`, `for`, `capture`) et aucun filtre inventé : en cas de doute sur un objet, un filtre ou une propriété, vérifie dans `references/liquid-officiel.md`, puis dans la documentation officielle.
 3. Sélecteurs CSS et JS alignés avec les classes et les `id` du HTML.
 4. Rendu vérifié pour : valeurs vides (réglage non rempli, métachamp absent), mobile à 390 px, produit sans image.
+5. Plan des titres de la page publiée, panier vide puis panier plein : `scripts/check_hn.py` (skill `seo-audit`). Un seul H1, aucun titre de gabarit.
 
 ## Livrable
 

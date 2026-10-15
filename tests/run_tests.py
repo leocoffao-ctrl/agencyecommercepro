@@ -57,6 +57,13 @@ run("lot d'articles → CSV Matrixify", [build, os.path.join(FIX, "manifest-lot.
 run("lot d'articles → JSON neutre", [build, os.path.join(FIX, "manifest-lot.json"), os.path.join(TMP, "lot.json"),
                                      "--config", CFG, "--format", "json", "--no-network"], expect=0)
 
+# --- titres Hn
+hn = P("vk-seo", "skills", "seo-audit", "scripts", "check_hn.py")
+run("Hn propres", [hn, os.path.join(FIX, "hn-ok.html"), "--quiet"], expect=0, contains=["0 bloquant(s), 0 titre(s) de gabarit"])
+run("Hn de gabarit bloqués", [hn, os.path.join(FIX, "hn-gabarit.html"), "--quiet"], expect=1,
+    contains=["2 H1", "H1 de gabarit", "précède le H1 de contenu", "Total estimé", "Vous avez un compte",
+              "anglais", "emoji", "niveau sauté", "rempli en JS"])
+
 # --- pages d'annuaire
 D = P("vk-content", "skills", "directory-pages")
 run("fiche d'annuaire générée", [os.path.join(D, "scripts", "build_fiche.py"),
