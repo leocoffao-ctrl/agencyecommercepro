@@ -1,6 +1,6 @@
 {
   "_aide": "État de synchronisation du kit avec le projet d'origine : empreinte de chaque skill source au dernier passage, et skills du kit qui en dérivent. Mis à jour par la procédure kit-sync.",
-  "dernier_passage": "2026-10-08",
+  "dernier_passage": "2026-10-26",
   "sources": {
     "coffao-ad-creative": {
       "cible": [
@@ -61,7 +61,7 @@
       "cible": [
         "vk-reels/mascot-reels"
       ],
-      "empreinte": "35f0fe6d48295feeab10277d7377471f913a4927fb7f3b6beebcbd4241f1f51c"
+      "empreinte": "b1e94adcc1d191530f1486730b5f78d0a38da35a73790ad7df8184d8c4cbb13d"
     },
     "coffao-reseaux-plan": {
       "cible": [

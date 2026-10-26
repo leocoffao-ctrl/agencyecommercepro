@@ -56,7 +56,16 @@ Règles de lisibilité, à ne pas dégrader :
 - Un accessoire de la couleur du fond disparaît : change le `tone` de la scène.
 - Ton, registre et précision : contexte §5.
 
-**Passe anti-IA obligatoire sur les bulles et les titres.** Avant le rendu, relis chaque bulle et chaque titre avec `reference/anti-ia.md` du skill `social-publish` et, s'il est installé, lance son `check_anti_ia.py --json bulles.json` avec `platform: "visuel"` (zéro « FORT »). Aucun fait n'est ajouté par la réécriture. Une vidéo dont les bulles n'ont pas eu cette passe ne se publie pas.
+**Passe anti-IA obligatoire sur les bulles et les titres.** Avant le rendu, relis chaque bulle et chaque titre avec `reference/anti-ia.md` du skill `social-publish` et, s'il est installé, lance son `check_anti_ia.py --json bulles.json` avec `platform: "visuel"` (zéro « FORT »). Tics à chasser dans une bulle : « le seul chiffre qui compte », « ce n'est pas X, c'est Y », une chute du type « ça ne rentre pas dans le calcul », « le détail qui surprend : », « pas de panique », le triplet systématique, la même formule d'ouverture ou de fin que la vidéo précédente. Aucun fait n'est ajouté par la réécriture. Une vidéo dont les bulles n'ont pas eu cette passe ne se publie pas.
+
+**Les trois premières secondes, un passage à part.** La question qui passe avant toute esthétique : au bout de 3 secondes, a-t-on envie de regarder jusqu'au bout ? Pour la scène d'accroche :
+- La première image a du sens sans le son : le sujet ou la tension se lit tout de suite (titre, mascotte, un accessoire du sujet). Un deuxième état arrive avant la troisième seconde : la mascotte réagit, un accessoire apparaît, une question s'affiche.
+- Propose **trois accroches différentes** (le problème d'abord, un aperçu du résultat, « tu reconnais ça ? ») qui mènent toutes au même contenu ; l'utilisateur choisit avant le rendu.
+- **Boucle ouverte honnête** : plante dans l'accroche un objet ou une question précise (trois objets vides, une étiquette à moitié lue, un mot de jargon à définir) et résous-la visiblement à l'avant-dernière scène. Un objet qui revient sans rien résoudre n'est qu'un rappel.
+- **Ferme la promesse avant l'appel à l'action** : la réponse est dans la vidéo ; un « mot-clé en message privé » n'est jamais la seule réponse.
+- Ni teasing vague (« attends la fin »), ni promesse que la vidéo ne tient pas, ni chiffre inventé pour embellir la chute.
+
+**Son 8-bit.** Un bruitage suit une action visible (une bulle qui apparaît, un accessoire qui se pose, une validation), pas chaque changement de scène. Évite les « zaps » laser et les sons qui descendent dans les graves ; varie les sons quand une liste défile. La musique reste sous les bulles et ne coupe jamais la dernière bulle.
 
 Pars d'un scénario de `specs/` et adapte-le : c'est plus sûr que de partir de zéro.
 
@@ -68,7 +77,7 @@ python3 scripts/reel_engine.py specs/<mon-reel>.json sortie/<mon-reel> --theme t
 
 Le moteur télécharge les polices du thème au premier lancement ; hors ligne, il continue avec une police intégrée et le signale. Sorties : `<filename>.mp4`, `cover.jpg` (l'accroche entièrement écrite), `storyboard.png`, `kf*.png`. `--no-audio` donne une vidéo muette pour un essai rapide.
 
-**Regarde toujours `storyboard.png` avant de livrer** : chevauchement d'un titre et d'un accessoire, texte coupé, contraste, mascotte cachée. Corrige le JSON et relance ; un rendu prend 20 à 40 secondes.
+**Regarde toujours `storyboard.png` avant de livrer**, en commençant par les images des trois premières secondes (la première image se comprend-elle sans le son ? le deuxième état arrive-t-il avant 3 secondes ?), puis : chevauchement d'un titre et d'un accessoire, texte coupé, contraste, mascotte cachée. Corrige le JSON et relance ; un rendu prend 20 à 40 secondes.
 
 ## 5. Livrer
 
@@ -84,6 +93,10 @@ Le moteur télécharge les polices du thème au premier lancement ; hors ligne, 
 - Toute modification : rends une vidéo de test et regarde le storyboard.
 
 Une mascotte est un élément de marque. Dessine un personnage original : ne reproduis pas un personnage existant, même simplifié.
+
+## 7. Chaque remarque devient une règle
+
+Quand l'utilisateur fait une remarque sur une vidéo (« on ne lit pas cette bulle », « ce son fait bas de gamme », « l'accroche est molle »), corrige la vidéo **puis inscris la correction de façon durable** : une règle dans la bonne section du contexte de marque (ou de ce skill si elle vaut pour toutes les marques), ou une vérification dans le moteur. Dis-lui ce que tu as ajouté. Il ne doit jamais faire deux fois la même remarque.
 
 ## Dépendances
 
